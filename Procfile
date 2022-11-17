@@ -1,1 +1,1 @@
-web: bin/rails db:create && bin/rails db:setup && bin/rails db:migrate && $RAILS_ENV bin/rails server -b 0.0.0.0 -p $PORT
+web: bin/rails db:setup && bin/rails db:migrate && $RAILS_ENV bin/rails server -b 0.0.0.0 -p $PORT
