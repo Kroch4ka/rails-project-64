@@ -1,0 +1,1 @@
+web: bin/rails db:create && bin/rails db:setup && bin/rails db:migrate && bin/rails server -p $PORT
