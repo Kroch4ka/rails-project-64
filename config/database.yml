@@ -21,5 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: <%= ENV.fetch("PGDATABASE") %>
+  url: <%= ENV.fetch("DATABASE_URL") %>
+  host: <%= ENV.fetch("PGHOST") %>
+  password: <%= ENV.fetch("PGPASSWORD") %>
+  port: <%= ENV.fetch("PGPORT") %>
+  user: <%= ENV.fetch("PGUSER") %>
