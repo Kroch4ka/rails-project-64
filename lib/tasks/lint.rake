@@ -3,7 +3,9 @@
 require 'slim_lint/rake_task'
 require 'rubocop/rake_task'
 
-SlimLint::RakeTask.new
+SlimLint::RakeTask.new do |c|
+  c.files = ['app/views']
+end
 
 RuboCop::RakeTask.new do |task|
   task.requires << 'rubocop-rails'
